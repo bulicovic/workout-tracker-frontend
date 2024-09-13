@@ -19,8 +19,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Check code formatting with Prettier
-        run: yarn prettier:check
       - name: Cache Yarn dependencies
         uses: actions/cache@v3
         with:
@@ -32,6 +30,8 @@ jobs:
             yarn-${{ runner.os }}-
       - name: Install dependencies
         run: yarn install --frozen-lockfile # similar to npm ci (clean install)
+      - name: Check code formatting with Prettier
+        run: yarn prettier:check
       - name: Run linting
         run: yarn lint
       - name: Build Angular app with SSR and SSG
