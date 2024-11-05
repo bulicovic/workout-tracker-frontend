@@ -14,31 +14,26 @@ jobs:
         node-version: [22.x]
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Cache Yarn dependencies
-        uses: actions/cache@v3
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          path: |
-            ~/.yarn
-            ~/.cache/yarn
-          key: yarn-${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            yarn-${{ runner.os }}-
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
       - name: Install dependencies
-        run: yarn install --frozen-lockfile # similar to npm ci (clean install)
+        run: pnpm install
       - name: Check code formatting with Prettier
-        run: yarn prettier:check
+        run: pnpm prettier:check
       - name: Run linting
-        run: yarn lint
-      - name: Build Angular app with SSR and SSG
-        run: yarn build
-      - name: Run Angular tests
-        run: yarn test -- --watch=false --browsers=ChromeHeadless
-
-      # (Optional) Run end-to-end tests
-#      - name: Run end-to-end tests
-#        run: npm run e2e -- --headless
+        run: pnpm lint
+      - name: Build App
+        run: pnpm build

@@ -1,10 +1,13 @@
 {
-  'printWidth': 100,
-  'tabWidth': 2,
-  'useTabs': false,
-  'embeddedLanguageFormatting': 'off',
-  'singleQuote': true,
-  'semi': true,
-  'quoteProps': 'preserve',
-  'bracketSpacing': false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "embeddedLanguageFormatting": "off",
+  "singleQuote": true,
+  "semi": true,
+  "quoteProps": "preserve",
+  "bracketSpacing": false,
+  "endOfLine": "lf",
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
