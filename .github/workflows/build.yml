@@ -1,4 +1,4 @@
-name: Build with yarn
+name: Build with pnpm
 on:
   push:
     branches:
