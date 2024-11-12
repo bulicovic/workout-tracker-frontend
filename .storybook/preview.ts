@@ -1,6 +1,16 @@
-import type { Preview, ReactRenderer } from '@storybook/react';
+import type { Preview } from '@storybook/react';
 import '../app/globals.css';
 import { withThemeByClassName } from '@storybook/addon-themes';
+
+export const decorators = [
+  withThemeByClassName({
+    themes: {
+      light: 'light',
+      dark: 'dark',
+    },
+    defaultTheme: 'light',
+  }),
+];
 
 const preview: Preview = {
   parameters: {
@@ -10,15 +20,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    decorators: [
-      withThemeByClassName<ReactRenderer>({
-        themes: {
-          light: 'light',
-          dark: 'dark',
-        },
-        defaultTheme: 'light',
-      }),
-    ],
+    decorators: [...decorators],
     tags: ['autodocs'],
   },
 };
