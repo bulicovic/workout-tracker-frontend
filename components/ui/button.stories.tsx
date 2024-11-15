@@ -34,7 +34,7 @@ export const Default: Story = {
     disabled: false,
     onClick: action('default click'),
     children: 'Default Button',
-    className: 'shadow-lg',
+    className: '',
   },
 };
 export const Destructive: Story = {
@@ -44,7 +44,7 @@ export const Destructive: Story = {
     disabled: false,
     onClick: action('destructive click'),
     children: 'Destructive Button',
-    className: 'shadow-lg',
+    className: '',
   },
 };
 export const Outline: Story = {
@@ -54,7 +54,7 @@ export const Outline: Story = {
     disabled: false,
     onClick: action('outline click'),
     children: 'Outline Button',
-    className: 'shadow-lg',
+    className: '',
   },
 };
 export const Secondary: Story = {
@@ -64,7 +64,7 @@ export const Secondary: Story = {
     disabled: false,
     onClick: action('secondary click'),
     children: 'Secondary Button',
-    className: 'shadow-lg',
+    className: '',
   },
 };
 export const Ghost: Story = {
@@ -74,7 +74,7 @@ export const Ghost: Story = {
     disabled: false,
     onClick: action('ghost click'),
     children: 'Ghost Button',
-    className: 'shadow-lg',
+    className: '',
   },
 };
 export const Link: Story = {
@@ -84,6 +84,6 @@ export const Link: Story = {
     disabled: false,
     onClick: action('link click'),
     children: 'Link Button',
-    className: 'shadow-lg',
+    className: '',
   },
 };

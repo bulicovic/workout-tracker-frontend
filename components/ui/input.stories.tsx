@@ -26,7 +26,7 @@ export const Default: Story = {
   args: {
     type: 'text',
     disabled: false,
-    className: 'bg-amber-400',
+    className: '',
     placeholder: 'Placeholder...',
   },
 };

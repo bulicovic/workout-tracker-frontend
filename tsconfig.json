@@ -21,6 +21,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/app/*": ["./app/*"],
+      "@/hooks/*": ["./components/hooks/*"],
       "@/ui/*": ["./components/ui/*"]
     }
   },
