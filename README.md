@@ -1,7 +1,7 @@
 # Workout Tracker Frontend
 
 ![Build Status](https://github.com/bulicovic/workout-tracker-frontend/actions/workflows/build.yml/badge.svg)
-![License]([https://img.shields.io/github/license/your-username/your-repo](https://img.shields.io/github/license/bulicovic/workout-tracker-frontend))
+![License](https://img.shields.io/github/license/bulicovic/workout-tracker-frontend)
 
 ## Project Description
 ...
