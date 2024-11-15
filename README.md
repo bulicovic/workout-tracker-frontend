@@ -1,3 +1,12 @@
+# Workout Tracker Frontend
+
+![Build Status](https://github.com/bulicovic/workout-tracker-frontend/actions/workflows/build.yml/badge.svg)
+![License](https://img.shields.io/github/license/bulicovic/workout-tracker-frontend)
+
+## Project Description
+
+...
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
